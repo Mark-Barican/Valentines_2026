@@ -59,8 +59,9 @@ export default function YesButton({ onAccepted }: YesButtonProps) {
               1500,
               "I promise to show you how much you mean to me.",
               1500,
-              "See you on the 16th for our date. - Mark",
-              
+              "See you on the 16th for our date.",
+              1500,
+              "I love you ❤️❤️❤️ - Mark",
             ]}
             speed={52}
             wrapper="span"
