@@ -4,10 +4,10 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { a, useSpring } from "@react-spring/three";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MathUtils, Mesh, MeshPhysicalMaterial } from "three";
+import { Group, MathUtils, Mesh, MeshPhysicalMaterial } from "three";
 
 export default function Heart3D() {
-  const group = useRef<THREE.Group>(null);
+  const group = useRef<Group>(null);
   const { scene } = useGLTF("/heart.glb");
   const [hovered, setHovered] = useState(false);
   const [clicked, setClicked] = useState(false);
