@@ -36,7 +36,7 @@ export default function ParticleField() {
       interactivity: {
         events: {
           onHover: { enable: true, mode: "repulse" },
-          resize: true,
+          resize: { enable: true },
         },
         modes: {
           repulse: { distance: 80, duration: 0.4 },
