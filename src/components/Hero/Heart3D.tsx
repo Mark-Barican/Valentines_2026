@@ -95,12 +95,18 @@ export default function Heart3D() {
       onPointerDown={(event) => {
         event.stopPropagation();
         dragState.current.active = true;
-        event.target.setPointerCapture(event.pointerId);
+        const target = event.target as HTMLElement | null;
+        if (target?.setPointerCapture) {
+          target.setPointerCapture(event.pointerId);
+        }
       }}
       onPointerUp={(event) => {
         event.stopPropagation();
         dragState.current.active = false;
-        event.target.releasePointerCapture(event.pointerId);
+        const target = event.target as HTMLElement | null;
+        if (target?.releasePointerCapture) {
+          target.releasePointerCapture(event.pointerId);
+        }
       }}
       onPointerMove={(event) => {
         if (!dragState.current.active) return;
